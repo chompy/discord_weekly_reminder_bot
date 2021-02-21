@@ -1,0 +1,40 @@
+announcements: &announcements
+    -
+        offset: -111600 # 7pm the previous day
+        check_attendance: true
+        message: |
+            @Static REMINDER! Raid tomorrow at {TIME}! Please react to confirm your attendance.
+    
+    -
+        offset: -28800 # 1pm the day of
+        message: |
+            @Static REMINDER! Raid tonight at {TIME}! Please let Minda know ASAP if you can't make it.
+        
+    -
+        offset: -3600 # 8pm the day of
+        message: |
+            @Static REMINDER! Raid starts in one hour! The PF will go up shortly.
+
+token: "<TOKEN HERE>"
+channel_id: "812490743729094677"
+timezone: "America/New_York"
+display_timezones:
+    - "America/New_York"
+    - "America/Los_Angeles"
+next_message: |
+    Next raid in {TIME}!
+events:
+    -
+        day: "Tuesday"
+        time: "21:00" # 9pm
+        announcements: *announcements
+
+    -
+        day: "Wednesday"
+        time: "21:00" # 9pm
+        announcements: *announcements
+
+    -
+        day: "Friday"
+        time: "21:00" # 9pm
+        announcements: *announcements
